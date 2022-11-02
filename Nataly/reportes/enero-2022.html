@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pagina de Reportes</title>
 
   <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- bootstrap only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <!-- IonIcons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/adminlte.min.css">
   <link rel="stylesheet" href="../dist/css/style.css">
   <link rel="stylesheet" href="../dist/css/style2.css">
-
+  <link rel="stylesheet" href="../dist/css/style4.css">
+  <!-- iCheck for checkboxes and radio inputs -->
+  <link rel="stylesheet" href="../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- Bootstrap Color Picker -->
+  <link rel="stylesheet" href="../plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
 </head>
- <!-- Preloader -->
- <div class="preloader flex-column justify-content-center align-items-center">
+<!-- Preloader -->
+<div class="preloader flex-column justify-content-center align-items-center">
   <img class="animation__shake" src="../dist/img/educacionadventista.png" alt="AdminLTELogo" height="220" width="220">
 </div>
 <!--
@@ -30,560 +39,821 @@
   * sidebar-collapse
   * sidebar-mini
 -->
-<body class="hold-transition sidebar-mini">
-<div class="wrapper">
- 
-  <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-light nav-nataly">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a style="color:white;" class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a style="color:white;" href="../index.html" class="nav-link">Inicio</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-      </li>
-    </ul>
 
-    <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
-      <!-- Navbar Search -->
-      <li class="nav-item">
-        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
-          <i  style="color:white;" class="fas fa-search"></i>
-        </a>
-        <div class="navbar-search-block">
-          <form class="form-inline">
-            <div class="input-group input-group-sm">
-              <input class="form-control form-control-navbar" type="search"  placeholder="Search" aria-label="Search"  >
-              <div class="input-group-append">
-                <button class="btn btn-navbar" type="submit">
-                  <i class="fas fa-search"></i>
-                </button>
-                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                  <i class="fas fa-times"></i>
-                </button>
+<body class="hold-transition sidebar-mini">
+  <div class="wrapper">
+
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-light nav-nataly">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a style="color:white;" class="nav-link" data-widget="pushmenu" href="#" role="button"><i
+              class="fas fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a style="color:white;" href="../index.html" class="nav-link">Inicio</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+        </li>
+      </ul>
+
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto">
+        <!-- Navbar Search -->
+        <li class="nav-item">
+          <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+            <i style="color:white;" class="fas fa-search"></i>
+          </a>
+          <div class="navbar-search-block">
+            <form class="form-inline">
+              <div class="input-group input-group-sm">
+                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                  <button class="btn btn-navbar" type="submit">
+                    <i class="fas fa-search"></i>
+                  </button>
+                  <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </li>
+
+
+        <!-- Notifications Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#">
+            <i style="color:white;" class="far fa-bell"></i>
+            <span class="badge badge-warning navbar-badge">11</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <span class="dropdown-item dropdown-header">11 Notificaciones</span>
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-users mr-2"></i> 8 asistencias marcadas
+              <span class="float-right text-muted text-sm">12 mins</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-file mr-2"></i> 3 nuevos reportes
+              <span class="float-right text-muted text-sm">2 dias</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item dropdown-footer">Ver más</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a style="color:white;" class="nav-link" data-widget="fullscreen" href="#" role="button">
+            <i class="fas fa-expand-arrows-alt"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-light-primary elevation-4 nav-nataly">
+      <!-- Brand Logo -->
+      <a href="https://cada.educacionadventista.com/" class="brand-link">
+        <img src="../dist/img/logoeducacion.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+          style="opacity: .8">
+        <span style="color:white;" class="brand-text font-weight-light">CADA</span>
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+
+          <div class="info">
+            <a style="color:white;" href="#" class="d-block">Registro de asistencia</a>
+          </div>
+        </div>
+
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+            <li class="nav-item menu-open">
+              <a href="#" class="nav-link active">
+                <i style="color:white;" class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Menú
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="../index.html" class="nav-link active">
+                    <i style="color:white;" class="fas fa-home"></i>
+                    <p style="color:white;">Inicio</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="../index3.html" class="nav-link">
+                    <i style="color:white;" class="fas fa-user-check"></i>
+                    <p style="color:white;">Asistencias<i class="fas fa-angle-left right"></i></p>
+                  </a>
+                  <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                      <a href="../index3.html" class="nav-link">
+                        <i style="color:rgb(207, 207, 207);" class="far fa-circle nav-icon"></i>
+                        <p style="color:rgb(207, 207, 207);">Estudiantes</p>
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                      <a href="../index3.html.html" class="nav-link">
+                        <i style="color:rgb(207, 207, 207);" class="far fa-circle nav-icon"></i>
+                        <p style="color:rgb(207, 207, 207);">Docentes</p>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="../pages/examples/profile.html" class="nav-link">
+                    <i style="color:white;" class="fas fa-plus"></i>
+                    <p style="color:white;"> Añadir</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="../pages/widgets.html" class="nav-link">
+                <i style="color:white;" class="nav-icon fas fa-th"></i>
+                <p style="color:white;"> Edit </p>
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1>Asistencias estudiantes</h1>
+            </div>
+          </div>
+        </div><!-- /.container-fluid -->
+      </section>
+
+      <!-- Main content -->
+      <section class="content">
+
+        <!-- Default box -->
+        <!-- /.row -->
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Año/Mes</h3>
+              </div>
+              <div class="card-body">
+                <ul class="pagination pagination-month justify-content-center">
+                  <li class="page-item"><a class="page-link" href="#">«</a></li>
+                  <li class="page-item active">
+                    <a class="page-link " href="#">
+                      <p class="page-month">Ene</p>
+                      <p class="page-year">2022</p>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">
+                      <p class="page-month">Feb</p>
+                      <p class="page-year">2022</p>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">
+                      <p class="page-month">Mar</p>
+                      <p class="page-year">2022</p>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">
+                      <p class="page-month">Abr</p>
+                      <p class="page-year">2022</p>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">
+                      <p class="page-month">May</p>
+                      <p class="page-year">2022</p>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">
+                      <p class="page-month">Jun</p>
+                      <p class="page-year">2022</p>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">
+                      <p class="page-month">Jul</p>
+                      <p class="page-year">2021</p>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">
+                      <p class="page-month">Ago</p>
+                      <p class="page-year">2022</p>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">
+                      <p class="page-month">Sep</p>
+                      <p class="page-year">2022</p>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">
+                      <p class="page-month">Oct</p>
+                      <p class="page-year">2022</p>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="../index3.html">
+                      <p class="page-month">Nov</p>
+                      <p class="page-year">2022</p>
+                    </a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">
+                      <p class="page-month">Dic</p>
+                      <p class="page-year">2022</p>
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">»</a></li>
+                </ul>
               </div>
             </div>
-          </form>
-        </div>
-      </li>
-
- 
-      <!-- Notifications Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i  style="color:white;" class="far fa-bell"></i>
-          <span class="badge badge-warning navbar-badge">11</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <span class="dropdown-item dropdown-header">11 Notificaciones</span>
-          <div class="dropdown-divider"></div>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-users mr-2"></i> 8 asistencias marcadas
-            <span class="float-right text-muted text-sm">12 mins</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-file mr-2"></i> 3 nuevos reportes
-            <span class="float-right text-muted text-sm">2 dias</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">Ver más</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a  style="color:white;" class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <!-- /.navbar -->
-
-   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-light-primary elevation-4 nav-nataly">
-    <!-- Brand Logo -->
-    <a href="https://cada.educacionadventista.com/" class="brand-link">
-      <img src="../dist/img/logoeducacion.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span  style="color:white;"  class="brand-text font-weight-light">CADA</span>
-    </a>
-
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
- 
-        <div class="info">
-          <a style="color:white;" href="#" class="d-block">Registro de asistencia</a>
-        </div>
-      </div>
-
-    
-       <!-- Sidebar Menu -->
-       <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
-              <i style="color:white;" class="nav-icon fas fa-tachometer-alt"></i>
-              <p> 
-                Menú
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="../index.html" class="nav-link active">
-                  <i style="color:white;" class="fas fa-home"></i>
-                  <p style="color:white;">Inicio</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../index3.html" class="nav-link">
-                  <i style="color:white;" class="fas fa-user-check"></i>
-                  <p style="color:white;">Asistencias<i class="fas fa-angle-left right"></i></p>
-                </a>
-                <ul class="nav nav-treeview">
-                  <li class="nav-item">
-                    <a href="../index3.html" class="nav-link">
-                      <i style="color:rgb(207, 207, 207);" class="far fa-circle nav-icon"></i>
-                      <p style="color:rgb(207, 207, 207);">Estudiantes</p>
-                    </a>
-                  </li>
-                </ul>
-                <ul class="nav nav-treeview">
-                  <li class="nav-item">
-                    <a href="../index3.html.html" class="nav-link">
-                      <i  style="color:rgb(207, 207, 207);" class="far fa-circle nav-icon"></i>
-                      <p style="color:rgb(207, 207, 207);" >Docentes</p>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a href="../pages/examples/profile.html" class="nav-link">
-                  <i style="color:white;" class="fas fa-plus"></i>
-                  <p style="color:white;"> Añadir</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="../pages/widgets.html" class="nav-link">
-              <i style="color:white;" class="nav-icon fas fa-th"></i>
-              <p style="color:white;"> Edit </p>
-            </a>
-          </li>
-
-        </ul>
-      </nav>
-      
-      <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
-  </aside>
-
-
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>Asistencias estudiantes</h1>
           </div>
         </div>
-      </div><!-- /.container-fluid -->
-    </section>
+        <!-- /.row -->
+        <div class="card collapsed-card">
+          <div class="card-header">
+            <h3 class="card-title">Tercer curso</h3>
 
-    <!-- Main content -->
-    <section class="content">
 
-      <!-- Default box -->
-      <!-- /.row -->
-      <div class="row">
-        <div class="col-12">
-          <div class="card">
-            <div class="card-header">
-              <h3 class="card-title">Año/Mes</h3>
-            </div>
-            <div class="card-body">
-              <ul class="pagination pagination-month justify-content-center">
-                <li class="page-item"><a class="page-link" href="#">«</a></li>
-                <li class="page-item active">
-                    <a class="page-link " href="#">
-                        <p class="page-month">Ene</p>
-                        <p class="page-year">2022</p>
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">
-                        <p class="page-month">Feb</p>
-                        <p class="page-year">2022</p>
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">
-                        <p class="page-month">Mar</p>
-                        <p class="page-year">2022</p>
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">
-                        <p class="page-month">Abr</p>
-                        <p class="page-year">2022</p>
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">
-                        <p class="page-month">May</p>
-                        <p class="page-year">2022</p>
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">
-                        <p class="page-month">Jun</p>
-                        <p class="page-year">2022</p>
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">
-                        <p class="page-month">Jul</p>
-                        <p class="page-year">2021</p>
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">
-                        <p class="page-month">Ago</p>
-                        <p class="page-year">2022</p>
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">
-                        <p class="page-month">Sep</p>
-                        <p class="page-year">2022</p>
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">
-                        <p class="page-month">Oct</p>
-                        <p class="page-year">2022</p>
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="../index3.html">
-                        <p class="page-month">Nov</p>
-                        <p class="page-year">2022</p>
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link" href="#">
-                        <p class="page-month">Dic</p>
-                        <p class="page-year">2022</p>
-                    </a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">»</a></li>
-              </ul>
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" title="Collapse">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+              <div class="btn-group">
+                <button type="button" class="btn btn-info"> <i class="fas fa-calendar-alt">
+                  </i> 01/01/2022</button>
+
+                <button type="button" class="btn btn-info dropdown-toggle dropdown-icon" data-toggle="dropdown">
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <div class="dropdown-menu" role="menu">
+                  <a class="dropdown-item" href="#">01/01/2022</a>
+                  <a class="dropdown-item" href="#">02/01/2022 </a>
+                  <a class="dropdown-item" href="#">03/01/2022</a>
+                  <a class="dropdown-item" href="#">04/01/2022</a>
+                  <a class="dropdown-item" href="#">05/01/2022</a>
+                  <a class="dropdown-item" href="#">06/01/2022</a>
+                  <a class="dropdown-item" href="#">07/01/2022</a>
+
+
+                </div>
+              </div>
+
+              <button type="button" class="btn btn-tool" title="Collapse">
+                <i class="fas fa-arrow-right"></i>
+              </button>
+              <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+              </button>
             </div>
           </div>
-        </div>
-      </div>
-      <!-- /.row -->
-      <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">Segundo curso</h3>
-        
-
-          <div class="card-tools">
-         
-            <button type="button" class="btn btn-tool" title="Collapse">
-              <i class="fas fa-arrow-left"></i>
-            </button>
-            
-            <a class="btn btn-info btn-sm" href="#">
-              <i class="fas fa-calendar-alt">
-              </i>
-              01/01/2022
-          </a> 
-            <button type="button" class="btn btn-tool" title="Collapse">
-              <i class="fas fa-arrow-right"></i>
-            </button>
-            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fas fa-minus"></i>
-            </button>
-          </div>
-        </div>
-        <div class="card-body p-0">
-          <table class="table table-striped projects">
+          <div class="card-body p-0">
+            <table class="table table-striped projects">
               <thead>
-                  <tr>
-                      <th style="width: 1%">
-                          Código
-                      </th>
-                      <th style="width: 20%">
-                          Nombre
-                      </th>
-                      <th style="width: 30%">
-                          Foto
-                      </th>
-                      <th>
-                          Curso
-                      </th>
-                      
-                      <th style="width: 8%" class="text-center">
-                          Estado
-                      </th>
-                      <th style="width: 20%">
-                      </th>
-                  </tr>
+                <tr>
+                  <th style="width: 1%">
+                    Código
+                  </th>
+                  <th style="width: 20%">
+                    Nombre
+                  </th>
+                  <th style="width: 30%">
+                    Foto
+                  </th>
+                  <th>
+                    Sección
+                  </th>
+
+                  <th style="width: 8%" class="text-center">
+                    Estado
+                  </th>
+                  <th style="width: 20%">
+                  </th>
+
+                </tr>
               </thead>
               <tbody>
-                  <tr>
-                      <td>
-                          #
-                      </td>
-                      <td>
-                          <a>
-                            Jonasthian amaguirre
-                          </a>
-                          <br/>
-                      </td>
-                      <td>
-                          <ul class="list-inline">
-                              <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../dist/img/avatar.png">
-                              </li>
-                          </ul>
-                      </td>
-                      <td class="project_progress">
-                        <a>
-                        2do BATAN
-                          </a>
-                      </td>
-                      <td class="project-state">
-                          <span class="badge badge-success">Presente</span>
-                      </td>
-                      <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-sm" href="#">
-                              <i class="fas fa-folder">
-                              </i>
-                              Ver más
-                          </a>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>
-                          #
-                      </td>
-                      <td>
-                          <a>
-                            leisi kiebich
-                          </a>
-                          <br/>
-                      </td>
-                      <td>
-                          <ul class="list-inline">
-                              <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="../dist/img/avatar2.png">
-                              </li>
-                          </ul>
-                      </td>
-                      <td class="project_progress">
-                        <a>
-                        2do BTI
-                          </a>
-                      </td>
-                      <td class="project-state">
-                          <span class="badge badge-success">Presente</span>
-                      </td>
-                      <td class="project-actions text-right">
-                        <a class="btn btn-primary btn-sm" href="#">
-                            <i class="fas fa-folder">
-                            </i>
-                            Ver más
+                <tr>
+                  <td>
+                    #
+                  </td>
+                  <td>
+                    <a>
+                      Jonasthian amaguirre
+                    </a>
+                    <br />
+                  </td>
+                  <td>
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <img alt="Avatar" class="table-avatar" src="../dist/img/avatar.png">
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="project_progress">
+                    <a>
+                      BATAN
+                    </a>
+                  </td>
+                  <td>
+                    <div class="form-group clearfix">
+                      <div class="icheck-success d-inline">
+                        <input type="radio" name="r2" id="radioDanger1">
+                        <label for="radioDanger1">
+                        </label>
+                      </div>
+                      <div class="icheck-danger d-inline">
+                        <input type="radio" name="r2" id="radioDanger2">
+                        <label for="radioDanger2">
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="project-actions text-right">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-info">Ver detalles</button>
+                      <button type="button" class="btn btn-info dropdown-toggle dropdown-icon" data-toggle="dropdown">
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <div class="dropdown-menu" role="menu">
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"></a>
+                        <a class="dropdown-item" href="#">
+                          <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
+                            <label for="customCheckbox1" class="custom-control-label">Ausencia </label>
+                          </div> justificada
                         </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                        #
-                    </td>
-                    <td>
-                        <a>
-                        manti gamarrez
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"></a>
+                        <a class="dropdown-item" href="#">
+                          <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="customCheckbox2" value="option1">
+                            <label for="customCheckbox2" class="custom-control-label">Ausencia </label>
+                          </div>injustificada
                         </a>
-                        <br/>
-                    </td>
-                    <td>
-                        <ul class="list-inline">
-                            <li class="list-inline-item">
-                                <img alt="Avatar" class="table-avatar" src="../dist/img/avatar3.png">
-                            </li>
-                        </ul>
-                    </td>
-                    <td class="project_progress">
-                      <a>
-                      2do BCS
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"></a>
+                        <a class="dropdown-item" href="#">
+                          <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="customCheckbox3" value="option1">
+                            <label for="customCheckbox3" class="custom-control-label">Retirado </label>
+                          </div>con antelación
                         </a>
-                    </td>
-                    <td class="project-state">
-                        <span class="badge badge-warning">Retirado</span>
-                    </td>
-                    <td class="project-actions text-right">
-                        <a class="btn btn-primary btn-sm" href="#">
-                            <i class="fas fa-folder">
-                            </i>
-                            Ver más
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"></a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    #
+                  </td>
+                  <td>
+                    <a>
+                      leisi kiebich
+                    </a>
+                    <br />
+                  </td>
+                  <td>
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <img alt="Avatar" class="table-avatar" src="../dist/img/avatar2.png">
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="project_progress">
+                    <a>
+                      BTI
+                    </a>
+                  </td>
+                  <td>
+                    <div class="form-group clearfix">
+                      <div class="icheck-success d-inline">
+                        <input type="radio" id="radioPrimary3" name="r1">
+                        <label for="radioPrimary3">
+                        </label>
+                      </div>
+                      <div class="icheck-danger d-inline">
+                        <input type="radio" id="radioPrimary4" name="r1">
+                        <label for="radioPrimary4">
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="project-actions text-right">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-info">Ver detalles</button>
+                      <button type="button" class="btn btn-info dropdown-toggle dropdown-icon" data-toggle="dropdown">
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <div class="dropdown-menu" role="menu">
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"></a>
+                        <a class="dropdown-item" href="#">
+                          <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option1">
+                            <label for="customCheckbox4" class="custom-control-label">Ausencia </label>
+                          </div> justificada
                         </a>
-                    </td>
-                 </tr>
-                 <tr>
-                    <td>
-                        #
-                    </td>
-                    <td>
-                        <a>
-                            edri rovallo
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"></a>
+                        <a class="dropdown-item" href="#">
+                          <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="customCheckbox5" value="option1">
+                            <label for="customCheckbox5" class="custom-control-label">Ausencia </label>
+                          </div>injustificada
                         </a>
-                        <br/>
-                    </td>
-                    <td>
-                        <ul class="list-inline">
-                            <li class="list-inline-item">
-                                <img alt="Avatar" class="table-avatar" src="../dist/img/avatar4.png">
-                            </li>
-                        </ul>
-                    </td>
-                    <td class="project_progress">
-                      <a>
-                      2do BTI
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"></a>
+                        <a class="dropdown-item" href="#">
+                          <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="customCheckbox6" value="option1">
+                            <label for="customCheckbox6" class="custom-control-label">Retirado </label>
+                          </div>con antelación
                         </a>
-                    </td>
-                    <td class="project-state">
-                        <span class="badge badge-danger">Ausente</span>
-                    </td>
-                    <td class="project-actions text-right">
-                        <a class="btn btn-primary btn-sm" href="#">
-                            <i class="fas fa-folder">
-                            </i>
-                            Ver más
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"></a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    #
+                  </td>
+                  <td>
+                    <a>
+                      manti gamarrez
+                    </a>
+                    <br />
+                  </td>
+                  <td>
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <img alt="Avatar" class="table-avatar" src="../dist/img/avatar3.png">
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="project_progress">
+                    <a>
+                      BCS
+                    </a>
+                  </td>
+                  <td>
+                    <div class="form-group clearfix">
+                      <div class="icheck-success d-inline">
+                        <input type="radio" name="r3" id="radioDanger3">
+                        <label for="radioDanger3">
+                        </label>
+                      </div>
+                      <div class="icheck-danger d-inline">
+                        <input type="radio" name="r3" id="radioDanger4">
+                        <label for="radioDanger4">
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="project-actions text-right">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-info">Ver detalles</button>
+                      <button type="button" class="btn btn-info dropdown-toggle dropdown-icon" data-toggle="dropdown">
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <div class="dropdown-menu" role="menu">
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"></a>
+                        <a class="dropdown-item" href="#">
+                          <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="customCheckbox7" value="option1">
+                            <label for="customCheckbox7" class="custom-control-label">Ausencia </label>
+                          </div> justificada
                         </a>
-                    </td>
-                 </tr>
-                 <tr>
-                    <td>
-                        #
-                    </td>
-                    <td>
-                        <a>
-                            lefi rolee
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"></a>
+                        <a class="dropdown-item" href="#">
+                          <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="customCheckbox8" value="option1">
+                            <label for="customCheckbox8" class="custom-control-label">Ausencia </label>
+                          </div>injustificada
                         </a>
-                        <br/>
-                    </td>
-                    <td>
-                        <ul class="list-inline">
-                            <li class="list-inline-item">
-                                <img alt="Avatar" class="table-avatar" src="../dist/img/avatar5.png">
-                            </li>
-                        </ul>
-                    </td>
-                    <td class="project_progress">
-                      <a>
-                      2do BTI
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"></a>
+                        <a class="dropdown-item" href="#">
+                          <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="customCheckbox9" value="option1">
+                            <label for="customCheckbox9" class="custom-control-label">Retirado </label>
+                          </div>con antelación
                         </a>
-                    </td>
-                    <td class="project-state">
-                        <span class="badge badge-success">Presente</span>
-                    </td>
-                    <td class="project-actions text-right">
-                        <a class="btn btn-primary btn-sm" href="#">
-                            <i class="fas fa-folder">
-                            </i>
-                            Ver más
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"></a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    #
+                  </td>
+                  <td>
+                    <a>
+                      edri rovallo
+                    </a>
+                    <br />
+                  </td>
+                  <td>
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <img alt="Avatar" class="table-avatar" src="../dist/img/avatar4.png">
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="project_progress">
+                    <a>
+                      BTI
+                    </a>
+                  </td>
+                  <td>
+                    <div class="form-group clearfix">
+                      <div class="icheck-success d-inline">
+                        <input type="radio" name="r4" id="radioDanger5">
+                        <label for="radioDanger5">
+                        </label>
+                      </div>
+                      <div class="icheck-danger d-inline">
+                        <input type="radio" name="r4" id="radioDanger6">
+                        <label for="radioDanger6">
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="project-actions text-right">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-info">Ver detalles</button>
+                      <button type="button" class="btn btn-info dropdown-toggle dropdown-icon" data-toggle="dropdown">
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <div class="dropdown-menu" role="menu">
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"></a>
+                        <a class="dropdown-item" href="#">
+                          <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="customCheckbox10" value="option1">
+                            <label for="customCheckbox10" class="custom-control-label">Ausencia </label>
+                          </div> justificada
                         </a>
-                    </td>
-                 </tr>
-                 <tr>
-                    <td>
-                        #
-                    </td>
-                    <td>
-                        <a>
-                            keti mporta
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"></a>
+                        <a class="dropdown-item" href="#">
+                          <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="customCheckbox11" value="option1">
+                            <label for="customCheckbox11" class="custom-control-label">Ausencia </label>
+                          </div>injustificada
                         </a>
-                        <br/>
-                    </td>
-                    <td>
-                        <ul class="list-inline">
-                            <li class="list-inline-item">
-                                <img alt="Avatar" class="table-avatar" src="../dist/img/avatar.png">
-                            </li>
-                        </ul>
-                    </td>
-                    <td class="project_progress">
-                      <a>
-                      2do BTI
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"></a>
+                        <a class="dropdown-item" href="#">
+                          <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="customCheckbox12" value="option1">
+                            <label for="customCheckbox12" class="custom-control-label">Retirado </label>
+                          </div>con antelación
                         </a>
-                    </td>
-                    <td class="project-state">
-                        <span class="badge badge-success">Presente</span>
-                    </td>
-                    <td class="project-actions text-right">
-                        <a class="btn btn-primary btn-sm" href="#">
-                            <i class="fas fa-folder">
-                            </i>
-                            Ver más
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"></a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    #
+                  </td>
+                  <td>
+                    <a>
+                      lefi rolee
+                    </a>
+                    <br />
+                  </td>
+                  <td>
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <img alt="Avatar" class="table-avatar" src="../dist/img/avatar5.png">
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="project_progress">
+                    <a>
+                      BTI
+                    </a>
+                  </td>
+                  <td>
+                    <div class="form-group clearfix">
+                      <div class="icheck-success d-inline">
+                        <input type="radio" name="r5" id="radioDanger7">
+                        <label for="radioDanger7">
+                        </label>
+                      </div>
+                      <div class="icheck-danger d-inline">
+                        <input type="radio" name="r5" id="radioDanger8">
+                        <label for="radioDanger8">
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="project-actions text-right">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-info">Ver detalles</button>
+                      <button type="button" class="btn btn-info dropdown-toggle dropdown-icon" data-toggle="dropdown">
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <div class="dropdown-menu" role="menu">
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"></a>
+                        <a class="dropdown-item" href="#">
+                          <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="customCheckbox13" value="option1">
+                            <label for="customCheckbox13" class="custom-control-label">Ausencia </label>
+                          </div> justificada
                         </a>
-                    </td>
-                 </tr>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"></a>
+                        <a class="dropdown-item" href="#">
+                          <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="customCheckbox14" value="option1">
+                            <label for="customCheckbox14" class="custom-control-label">Ausencia </label>
+                          </div>injustificada
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"></a>
+                        <a class="dropdown-item" href="#">
+                          <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="customCheckbox15" value="option1">
+                            <label for="customCheckbox15" class="custom-control-label">Retirado </label>
+                          </div>con antelación
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"></a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    #
+                  </td>
+                  <td>
+                    <a>
+                      keti mporta
+                    </a>
+                    <br />
+                  </td>
+                  <td>
+                    <ul class="list-inline">
+                      <li class="list-inline-item">
+                        <img alt="Avatar" class="table-avatar" src="../dist/img/avatar.png">
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="project_progress">
+                    <a>
+                      BTI
+                    </a>
+                  </td>
+                  <td>
+                    <div class="form-group clearfix">
+                      <div class="icheck-success d-inline">
+                        <input type="radio" name="r6" id="radioDanger9">
+                        <label for="radioDanger9">
+                        </label>
+                      </div>
+                      <div class="icheck-danger d-inline">
+                        <input type="radio" name="r6" id="radioDanger10">
+                        <label for="radioDanger10">
+                        </label>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="project-actions text-right">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-primary">Ver detalles</button>
+                      <button type="button" class="btn btn-info dropdown-toggle dropdown-icon" data-toggle="dropdown">
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <div class="dropdown-menu" role="menu">
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"></a>
+                        <a class="dropdown-item" href="#">
+                          <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="customCheckbox16" value="option1">
+                            <label for="customCheckbox16" class="custom-control-label">Ausencia </label>
+                          </div> justificada
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"></a>
+                        <a class="dropdown-item" href="#">
+                          <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="customCheckbox17" value="option1">
+                            <label for="customCheckbox17" class="custom-control-label">Ausencia </label>
+                          </div>injustificada
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"></a>
+                        <a class="dropdown-item" href="#">
+                          <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="customCheckbox18" value="option1">
+                            <label for="customCheckbox18" class="custom-control-label">Retirado </label>
+                          </div>con antelación
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"></a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
               </tbody>
-          </table>
+            </table>
+          </div>
+          <!-- /.card-body -->
         </div>
-        <!-- /.card-body -->
-      </div>
-      <!-- /.card -->
+        <!-- /.card -->
 
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-
-  <!-- Main Footer -->
-  <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.2.0
+      </section>
+      <!-- /.content -->
     </div>
-  </footer>
-</div>
-<!-- ./wrapper -->
+    <!-- /.content-wrapper -->
 
-<!-- REQUIRED SCRIPTS -->
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
 
-<!-- jQuery -->
-<script src="../plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap -->
-<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE -->
-<script src="../dist/js/adminlte.js"></script>
+    <!-- Main Footer -->
+    <footer class="main-footer">
+      <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+      All rights reserved.
+      <div class="float-right d-none d-sm-inline-block">
+        <b>Version</b> 3.2.0
+      </div>
+    </footer>
+  </div>
+  <!-- ./wrapper -->
 
-<!-- OPTIONAL SCRIPTS -->
-<script src="../plugins/chart.js/Chart.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../dist/js/demo.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="../dist/js/pages/dashboard3.js"></script>
+  <!-- REQUIRED SCRIPTS -->
+
+  <!-- jQuery -->
+  <script src="../plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!--bootstrap JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  <!-- AdminLTE -->
+  <script src="../dist/js/adminlte.js"></script>
+
+  <!-- OPTIONAL SCRIPTS -->
+  <script src="../plugins/chart.js/Chart.min.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="../dist/js/demo.js"></script>
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <script src="../dist/js/pages/dashboard3.js"></script>
 </body>
+
 </html>
