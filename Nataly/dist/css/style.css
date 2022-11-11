@@ -38,3 +38,10 @@
     background-color: rgb(128, 224, 248);
     
 }
+
+.colores-imagen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
